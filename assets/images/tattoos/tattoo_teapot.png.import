@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oe8tdh3fojfw"
-path="res://.godot/imported/tattoo_sign1.webp-e0fcbe551d3ff65590049527bdf072c5.ctex"
+uid="uid://c3aw13yrh2b46"
+path="res://.godot/imported/tattoo_teapot.png-9ff0524879918cf9b53c0314bff8517f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inspo/tattoo_sign1.webp"
-dest_files=["res://.godot/imported/tattoo_sign1.webp-e0fcbe551d3ff65590049527bdf072c5.ctex"]
+source_file="res://assets/images/tattoos/tattoo_teapot.png"
+dest_files=["res://.godot/imported/tattoo_teapot.png-9ff0524879918cf9b53c0314bff8517f.ctex"]
 
 [params]
 

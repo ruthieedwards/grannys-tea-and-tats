@@ -6,6 +6,7 @@ extends Control
 
 @onready var score_label: Label = $ScoreLabel
 @onready var next_button: Button = $NextButton
+@onready var count_sfx: AudioStreamPlayer = $CountSFX
 
 
 var target_score: int = 0
@@ -35,6 +36,9 @@ func show_score(final_score: int) -> void:
 	
 	#slide up the toast 
 	tween.tween_property(self, "global_position:y", target_y, slide_duration).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	# play drumroll sound effect
+	tween.tween_callback(func(): if count_sfx: count_sfx.play())
 
 	# count up the score
 	tween.tween_property(self, "displayed_score", target_score, score_duration)\

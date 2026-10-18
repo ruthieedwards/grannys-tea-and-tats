@@ -8,6 +8,7 @@ extends Node2D
 @onready var tattoo_container: Node2D = $TattooContainer
 # @onready var target_group: Node2D = $TargetGroup
 @onready var drawing_canvas: Node2D = $DrawingCanvas
+@onready var buzz_sfx: AudioStreamPlayer = $BuzzSFX
 
 
 @export_file("*.tscn") var game_over_scene: String = "res://scenes/GameOverScreen.tscn"
@@ -35,7 +36,7 @@ func _ready() -> void:
 
 func load_level(level_index: int) -> void:
 	current_level = level_index
-	level_label.text = "Level " + str(current_level + 1) + "/" + str(max_levels)
+	level_label.text = "Customer: " + str(current_level + 1) + "/" + str(max_levels)
 	# score_label.text = "Score: --"
 	submit_button.show()
 	# next_button.hide()
@@ -69,6 +70,10 @@ func start_stroke(pos: Vector2) -> void:
 	drawing_canvas.add_child(current_line)
 	current_line.add_point(pos)
 
+	# bzzzzzzzzz
+	if buzz_sfx and not buzz_sfx.playing:
+		buzz_sfx.play()
+
 func add_point_to_stroke(pos: Vector2) -> void:
 	if current_line and current_line.get_point_count() > 0:
 		if current_line.get_point_position(current_line.get_point_count() - 1).distance_to(pos) > 2.0:
@@ -77,6 +82,10 @@ func add_point_to_stroke(pos: Vector2) -> void:
 func stop_stroke() -> void:
 	is_drawing = false
 	current_line = null
+
+	# stop bzzzzz
+	if buzz_sfx and buzz_sfx.playing:
+		buzz_sfx.stop()
 
 
 ##### BUTTONS #####

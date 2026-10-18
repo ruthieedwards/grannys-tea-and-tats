@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Tattoo Game"
-run/main_scene="uid://bidrg8qr8l7n3"
+run/main_scene="uid://bv6tnwbka56p8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://cejahf24is7mv"
+MusicManager="*uid://c3hwu302f1ggu"
 
 [display]
 
