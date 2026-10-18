@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bv6tnwbka56p8"]
+
+[ext_resource type="Script" uid="uid://dvpk17jjfvlkd" path="res://scripts/splashscreen.gd" id="1_wxot6"]
+[ext_resource type="FontFile" uid="uid://d3mrtlj5q6afv" path="res://assets/fonts/Sancreek-Regular.ttf" id="2_l2g8s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sshfj"]
+font = ExtResource("2_l2g8s")
+font_size = 39
+
+[node name="SplashScreen" type="Control" unique_id=458152601]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wxot6")
+main_game_scene = "uid://bidrg8qr8l7n3"
+
+[node name="BG" type="TextureRect" parent="." unique_id=562153979]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleText" type="Label" parent="." unique_id=35427407]
+layout_mode = 1
+offset_left = 451.0
+offset_top = 292.0
+offset_right = 821.0
+offset_bottom = 348.0
+text = "GRANNY'S TEA & TATS"
+label_settings = SubResource("LabelSettings_sshfj")
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="." unique_id=1058598359]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 369.0
+offset_right = 654.0
+offset_bottom = 400.0
+text = "Play"
